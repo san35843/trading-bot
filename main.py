@@ -1,10 +1,12 @@
-print("Trading Bot Started")
+print("Bot Started")
 
-balance = 1000
-risk_per_trade = 0.02
+price = 100
+support = 95
+resistance = 105
 
-def calculate_lot(balance, risk):
-    return balance * risk
-
-lot = calculate_lot(balance, risk_per_trade)
-print("Lot size:", lot)
+if price > resistance:
+    print("SELL signal")
+elif price < support:
+    print("BUY signal")
+else:
+    print("NO TRADE")
